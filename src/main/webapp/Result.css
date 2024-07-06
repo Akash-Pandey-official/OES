@@ -1,0 +1,147 @@
+/* Base Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: lightyellow;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto 30px;
+  padding: 20px;
+  background-color: lightblue;
+  border-radius: 25px;
+  box-shadow: 5px 10px 8px 10px #888888;
+  overflow-x: auto; /* Added to allow horizontal scrolling */
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin: 2px 2px;
+}
+
+.result-table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  overflow-x: auto; /* Added to allow horizontal scrolling */
+}
+
+.result-table th, .result-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+
+.result-table th {
+  background-color: #4CAF50;
+  color: white;
+  border: 2px solid black;
+}
+
+.result-table tr {
+  background-color: white;
+}
+
+.result-table td {
+  border: 2px solid black;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+}
+
+.result-table th, .result-table td {
+  transition: background-color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: color 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+  color: #4CAF50;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4CAF50;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+  margin: 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
